@@ -1,0 +1,10 @@
+ensamblador,contigs_500,n50_kbp,nga50_kbp,lga50,misassemblies,genome_fraction_pct
+ABySS,185,115,108,26,5,97.82
+Edena,1442,3,4,374,4,69.49
+IDBA-UD,83,236,220,7,3,98.45
+MaSuRCA,145,90,88,20,9,98.36
+Ray,123,112,112,16,7,97.90
+SGA,465,58,56,93,2,96.33
+SOAPdenovo2,114,117,111,13,4,97.34
+SPAdes,85,247,200,10,4,98.53
+Velvet,866,22,21,194,2,96.54
