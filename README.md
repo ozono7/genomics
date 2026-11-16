@@ -35,6 +35,10 @@ No se necesita experiencia previa en genómica. Se necesita una computadora con 
   `install.packages(c("ggplot2", "dplyr", "readr", "scales", "tidyr"))`
 - Para las lecciones que usan herramientas de línea de comandos (FastQC, Trim Galore, ensambladores, QUAST, BUSCO, fastANI, BLAST+, Diamond, KAAS), se recomienda instalarlas con conda en un ambiente aparte. Cada lección indica qué herramienta usa y cómo se instala. Los análisis de ejemplo de las lecciones 01 a 03 se pueden seguir solo con R y los CSV de cada lección.
 
+## Sin supercomputadora
+
+Este curso corre en una computadora normal, sin supercomputadora: cada lección es un paso independiente, con datos públicos pequeños. La mayoría de los pasos (FastQC, BUSCO, ANI, BLAST, DESeq2) corren en laptop; el ensamblaje depende del organismo: virus y bacterias sí se ensamblan en laptop, eucariotas pequeños con más RAM o Colab Pro, y eucariotas grandes con Colab Pro por un mes o renta en la nube para ese paso. Los accesos gratuitos (Galaxy, Colab, KBase, eggNOG web, KAAS, NCBI BLAST), las herramientas y la guía de la computadora ideal para el laboratorio están en [ROADMAP.md](ROADMAP.md).
+
 ## Cómo usar las lecciones
 
 ### Orden recomendado

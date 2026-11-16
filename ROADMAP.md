@@ -21,6 +21,37 @@ Cada lección parte de datos de repositorios públicos, con su acceso y su forma
 - **Lista:** lección 01.
 - **En preparación:** lecciones 02 a 14.
 
+## Sin supercomputadora: cómo trabajar
+
+Este curso está diseñado para correrse en una computadora normal, sin supercomputadora. El flujo es el mismo que se usa en el laboratorio, pero con datos públicos pequeños y sección por sección: cada lección es un paso independiente que produce archivos que alimentan el siguiente, así que se puede correr un paso hoy y el siguiente mañana, en la máquina que toque.
+
+### Qué corre en una laptop y qué no
+
+La mayoría de los pasos son ligeros: FastQC, Trim Galore, BUSCO, cobertura, fastANI, BLASTp con Diamond, Salmon/Kallisto, DESeq2 y pathview corren en una laptop normal. El paso pesado es el ensamblaje de novo, y ahí depende del organismo (ver lección 03):
+
+- **Virus:** genomas de kilobases; se ensamblan en laptop sin problema, con cualquier ensamblador.
+- **Bacterias:** genomas de 3–6 Mb; se ensamblan en laptop con 16 GB de RAM (SPAdes, MEGAHIT, Unicycler). Sí se puede.
+- **Eucariotas pequeños (levaduras, microalgas como Chlorella, ~12–150 Mb):** se ensamblan en laptop con 32–128 GB de RAM, más lento pero posible; o en Colab Pro.
+- **Eucariotas grandes (plantas como Opuntia, ~800 Mb, o animales):** el ensamblaje necesita mucha RAM (el de Opuntia usó 750 GB en supercomputadora). Para ese paso se usa Colab Pro por un mes o se renta una máquina en la nube por horas; todo lo demás del flujo (anotación, ANI, BLAST, KEGG) corre en laptop.
+
+### Accesos gratuitos
+
+- **Galaxy** (https://usegalaxy.org): plataforma web gratuita que corre FastQC, SPAdes, MEGAHIT, Trinity, DESeq2 y más en sus servidores, sin instalar nada.
+- **Google Colab** (https://colab.research.google.com): cuadernos gratuitos en la nube; **Colab Pro** (~10 USD/mes) da más RAM (hasta 52 GB) y sesiones más largas, suficiente para ensamblar eucariotas pequeños y medianos.
+- **KBase** (https://www.kbase.us): plataforma gratuita para genómica y metagenómica.
+- **eggNOG-mapper web** (https://eggnog-mapper.embl.de): anotación funcional desde el navegador, sin instalar nada.
+- **KAAS** (https://www.genome.jp/kaas-bin/kaas_main): asignación de KO de KEGG desde el navegador.
+- **NCBI BLAST web** (https://blast.ncbi.nlm.nih.gov): búsqueda de secuencias desde el navegador.
+- **Nube por horas:** AWS, Google Cloud y Azure permiten rentar una máquina grande por horas (instancias spot, unos dólares por unas horas) solo para el paso pesado.
+
+### Instalación de herramientas
+
+Las herramientas de línea de comandos (FastQC, Trim Galore, ensambladores, QUAST, BUSCO, fastANI, BLAST+, Diamond) se instalan con conda. La instalación paso a paso está en el curso de Batch Unix (lecciones 12 y 13: conda y conda para bioinformática). Cada lección de este curso indica qué herramienta usa y cómo se instala.
+
+### Estación de trabajo para el laboratorio
+
+Si se quiere trabajar en local aunque tarde más, hay una guía de la computadora ideal para bioinformática en [guia-estacion-trabajo-bioinformatica.md](guia-estacion-trabajo-bioinformatica.md): qué piezas importan (RAM primero, luego núcleos, disco NVMe y GPU), con precios estimados en pesos mexicanos a noviembre de 2026 y presupuesto menor a 200,000 MXN.
+
 ## Bloque 1. De lecturas a ensamblaje
 
 Requisito previo: ninguno. Solo se necesita R con los paquetes indicados en el README.
@@ -39,7 +70,7 @@ Al terminar, el alumno sabrá leer un reporte de FastQC y limpiar lecturas antes
 
 ### 03. Los ensambladores: ABySS, MEGAHIT, SPAdes y Unicycler — En preparación
 
-Cómo funciona cada ensamblador, en qué se diferencian sus estrategias y cuándo conviene cada uno. Se revisan los nueve ensambladores del estudio de referencia (SPAdes, IDBA-UD, ABySS, MEGAHIT, Velvet y los demás) y Unicycler, el ensamblador que usa el laboratorio para sus genomas.
+Cómo funciona cada ensamblador, en qué se diferencian sus estrategias y cuándo conviene cada uno. Se revisan los nueve ensambladores del estudio de referencia (SPAdes, IDBA-UD, ABySS, MEGAHIT, Velvet y los demás) y Unicycler, el ensamblador que usa el laboratorio para sus genomas. **Ensamblaje por tipo de célula:** virus y bacterias se ensamblan en laptop (genomas de kilobases a 3–6 Mb, 16 GB de RAM bastan); eucariotas pequeños (levaduras, microalgas, ~12–150 Mb) en laptop con 32–128 GB de RAM o en Colab Pro; eucariotas grandes (~800 Mb o más) necesitan Colab Pro por un mes o renta en la nube para ese paso, con los accesos y el material en la sección "Sin supercomputadora" de este roadmap.
 
 Al terminar, el alumno sabrá elegir un ensamblador según el tipo de datos y correrlo sobre lecturas limpias.
 
