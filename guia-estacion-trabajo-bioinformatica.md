@@ -10,7 +10,7 @@
 
 ## Para qué sirve esta guía
 
-El laboratorio perdió el acceso al supercomputador del IPICYT/UNAM y el trabajo se hace ahora con una laptop. Esta guía describe una estación de trabajo que se puede armar en el laboratorio, con un presupuesto menor a 200,000 MXN, para correr bioinformática en local aunque sea más despacio: control de calidad de lecturas, ensamblaje de genomas, BUSCO, ANI, anotación funcional, BLAST y Diamond, RNA-seq y AlphaFold/ColabFold.
+Esta guía describe una estación de trabajo que se puede armar en el laboratorio, con un presupuesto menor a 200,000 MXN, para correr bioinformática en local aunque sea más despacio: control de calidad de lecturas, ensamblaje de genomas, BUSCO, ANI, anotación funcional, BLAST y Diamond, RNA-seq y AlphaFold/ColabFold.
 
 La idea no es reemplazar un centro de cómputo. Es tener una máquina propia donde el flujo de trabajo completo corre paso a paso, sin depender de que alguien más preste tiempo de cómputo, y donde los proyectos del laboratorio — genomas bacterianos, genomas de microalgas del tamaño de *Chlorella* y análisis de RNA-seq — se resuelven en casa. El ensamblaje de un genoma vegetal grande sigue siendo el paso más pesado y se trata con honestidad en la sección de qué puede y qué no puede hacer esta máquina.
 
