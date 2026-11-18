@@ -32,13 +32,13 @@
 #
 # Datos: datos_quast.csv, en esta misma carpeta. Son los resultados
 #   publicados por Forouzan y colaboradores (2017) para tres genomas
-#   bacterianos reales del estudio GAGE-B, evaluados con QUAST.
+#   bacterianos del estudio GAGE-B, evaluados con QUAST.
 #   Forouzan E, Maleki MSM, Karkhane AA, Yakhchali B (2017). Evaluation
 #   of nine popular de novo assemblers in microbial genome assembly.
 #   J Microbiol Methods 143:32-37. doi:10.1016/j.mimet.2017.09.008.
 #   PMID 28939423. Tabla 3 del artículo.
 #
-#   Cada valor es el promedio de los tres genomas, con cobertura real
+#   Cada valor es el promedio de los tres genomas, con cobertura
 #   de alrededor de 100x:
 #     Mycobacterium abscessus: 96x, GC 64 por ciento, lecturas de 100 pb
 #     Rhodobacter sphaeroides 2.4.1: 126x, GC 69 por ciento, 101 pb

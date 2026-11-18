@@ -14,7 +14,7 @@ Curso de genómica en R, desde cero, en español: del control de calidad de las 
 
 La genómica estudia el genoma completo de un organismo. Un genoma no se lee de principio a fin: se secuencia en millones de lecturas cortas y después se reconstruye con un programa ensamblador. Este curso enseña ese camino completo: limpiar lecturas, ensamblarlas, evaluar el ensamblaje, anotar los genes y buscar en el genoma genes o rutas concretas.
 
-Los ejemplos del curso usan los flujos de trabajo reales del laboratorio con *Chlorella vulgaris*: FastQC y Trim Galore para calidad y limpieza, ABySS, MEGAHIT, SPAdes y Unicycler para ensamblar, QUAST y BUSCO para evaluar, Kraken2 para clasificar, ANI para comparar con genomas de referencia, Funannotate y Prokka para anotar, y eggNOG-mapper y KAAS para la anotación funcional y KEGG.
+Los ejemplos del curso usan los flujos de trabajo del laboratorio con *Chlorella vulgaris*: FastQC y Trim Galore para calidad y limpieza, ABySS, MEGAHIT, SPAdes y Unicycler para ensamblar, QUAST y BUSCO para evaluar, Kraken2 para clasificar, ANI para comparar con genomas de referencia, Funannotate y Prokka para anotar, y eggNOG-mapper y KAAS para la anotación funcional y KEGG.
 
 ### Datos públicos, desde cero
 
